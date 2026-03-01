@@ -1,13 +1,33 @@
 # Analyzing-Track-Popularity-Using-Spotify-Dataset
-🎧 Spotify Track Popularity Analysis
+🎧 Spotify Track Popularity Prediction
 
-Big Data Analytics Project using R
+Data Analytics & Machine Learning Project in R
 
-📌 Project Overview
+📌 Executive Summary
 
-This project applies the Big Data Analytics Lifecycle to a real-world Spotify dataset to analyze and predict track popularity.
+This project analyzes a real-world Spotify dataset to identify the key factors that drive track popularity and builds a predictive model using Linear Regression.
 
-The goal is to understand what factors influence a song’s popularity using:
+Using statistical testing and machine learning, the project uncovers how artist influence, release timing, and content characteristics affect streaming success.
+
+🎯 Business Problem
+
+Streaming platforms rely heavily on analytics to:
+
+Recommend songs
+
+Promote artists
+
+Maximize listener engagement
+
+This project answers:
+
+What factors significantly impact track popularity?
+
+🔍 Analytical Approach
+
+The project follows the Big Data Analytics Lifecycle:
+
+Data Cleaning & Preprocessing
 
 Exploratory Data Analysis (EDA)
 
@@ -15,81 +35,35 @@ Hypothesis Testing
 
 Correlation Analysis
 
-Linear Regression Modeling
+Predictive Modeling
 
-Model Evaluation Metrics
+Model Evaluation
 
-📂 Dataset Description
+📊 Key Insights
 
-The dataset contains Spotify track, artist, and album information including:
+📈 Artist popularity and follower count are the strongest predictors
 
-track_popularity (0–100)
+🆕 Newer tracks significantly outperform older tracks
 
-artist_popularity
+🔞 Explicit content has a statistically significant impact
 
-artist_followers
+⏱️ Track duration moderately influences popularity
 
-explicit (TRUE/FALSE)
+📉 Popularity distribution is concentrated in mid–high range (40–80)
 
-album_total_tracks
+🧪 Statistical Testing
 
-track_duration_min
+Two Independent T-Tests were conducted:
 
-album_release_date
+Explicit vs Non-Explicit Tracks → Significant difference
 
-release_year (extracted)
-
-After cleaning:
-
-Duplicates removed
-
-Missing values handled
-
-Variables converted to correct data types
-
-🔎 Exploratory Data Analysis
-
-Key findings:
-
-Most tracks have moderate popularity (40–80 range)
-
-Artist popularity strongly correlates with track popularity
-
-Artists with 1M+ followers produce more popular tracks
-
-Newer tracks tend to have higher popularity
-
-Explicit content has a statistically significant effect
-
-Visualizations included:
-
-Histogram
-
-Boxplots
-
-Scatter plots with regression line
-
-Density plot
-
-🧪 Hypothesis Testing
-Test 1: Explicit vs Non-Explicit Tracks
-
-Independent T-Test
-
-Result: Statistically significant difference
-
-Test 2: Older vs Newer Tracks
-
-Independent T-Test
-
-Result: Newer tracks significantly more popular
+Older vs Newer Tracks → Newer tracks significantly more popular
 
 🤖 Machine Learning Model
-Technique Used
 
-Linear Regression
+Model: Linear Regression
 
-Model Features
+Features Used:
 
 Artist popularity
 
@@ -103,25 +77,17 @@ Explicit content
 
 Release year
 
-Data Split
+📊 Evaluation Metrics
 
-70% Training
+RMSE
 
-30% Testing
+MAE
 
-Stratified sampling using caret
+R²
 
-📊 Model Evaluation Metrics
+The model demonstrates strong explanatory power and reasonable prediction error, confirming the importance of artist-related variables.
 
-RMSE (Root Mean Squared Error)
-
-MAE (Mean Absolute Error)
-
-R² (Coefficient of Determination)
-
-The model demonstrates good explanatory power and reasonable prediction error.
-
-🛠️ Technologies Used
+🛠️ Technologies
 
 R
 
@@ -129,24 +95,6 @@ tidyverse
 
 caret
 
-base R visualization
+Statistical Modeling
 
-🚀 How to Run the Project
-
-Install required packages:
-
-install.packages(c("tidyverse", "caret"))
-
-Place the dataset in your working directory.
-
-Run the R script.
-
-📌 Key Insights
-
-Artist popularity and followers are the strongest predictors.
-
-Recency significantly impacts popularity.
-
-Explicit content influences track performance.
-
-Linear regression provides interpretability with solid performance.
+Data Visualization
